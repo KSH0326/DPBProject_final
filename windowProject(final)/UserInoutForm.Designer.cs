@@ -29,18 +29,28 @@ namespace windowProject_final_
         /// </summary>
         private void InitializeComponent()
         {
-            this.seat1 = new System.Windows.Forms.Button();
-            this.seat2 = new System.Windows.Forms.Button();
-            this.seat3 = new System.Windows.Forms.Button();
-            this.seat4 = new System.Windows.Forms.Button();
-            this.seat5 = new System.Windows.Forms.Button();
-            this.seat8 = new System.Windows.Forms.Button();
-            this.seat6 = new System.Windows.Forms.Button();
-            this.seat7 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.DBGrid = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.gotomainBtn = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.selectbox = new System.Windows.Forms.GroupBox();
+            this.seat13 = new System.Windows.Forms.Button();
+            this.seat12 = new System.Windows.Forms.Button();
+            this.seat11 = new System.Windows.Forms.Button();
             this.seat10 = new System.Windows.Forms.Button();
             this.seat9 = new System.Windows.Forms.Button();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
@@ -51,146 +61,188 @@ namespace windowProject_final_
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.DBGrid = new System.Windows.Forms.DataGridView();
-            this.selectbox.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.seat4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.seat1 = new System.Windows.Forms.Button();
+            this.seat8 = new System.Windows.Forms.Button();
+            this.seat2 = new System.Windows.Forms.Button();
+            this.seat5 = new System.Windows.Forms.Button();
+            this.seat7 = new System.Windows.Forms.Button();
+            this.seat6 = new System.Windows.Forms.Button();
+            this.seat3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.selectbox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // seat1
+            // DBGrid
             // 
-            this.seat1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat1.Location = new System.Drawing.Point(1, 18);
-            this.seat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat1.Name = "seat1";
-            this.seat1.Size = new System.Drawing.Size(57, 52);
-            this.seat1.TabIndex = 0;
-            this.seat1.Text = "1";
-            this.seat1.UseVisualStyleBackColor = false;
-            this.seat1.Click += new System.EventHandler(this.seat1_Click);
+            this.DBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DBGrid.Location = new System.Drawing.Point(451, 75);
+            this.DBGrid.Name = "DBGrid";
+            this.DBGrid.RowHeadersWidth = 51;
+            this.DBGrid.RowTemplate.Height = 23;
+            this.DBGrid.Size = new System.Drawing.Size(368, 343);
+            this.DBGrid.TabIndex = 12;
             // 
-            // seat2
+            // label4
             // 
-            this.seat2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat2.Location = new System.Drawing.Point(74, 18);
-            this.seat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat2.Name = "seat2";
-            this.seat2.Size = new System.Drawing.Size(57, 52);
-            this.seat2.TabIndex = 0;
-            this.seat2.Text = "2";
-            this.seat2.UseVisualStyleBackColor = false;
-            this.seat2.Click += new System.EventHandler(this.seat2_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(448, 53);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 15);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "좌석 현황";
             // 
-            // seat3
+            // logoutBtn
             // 
-            this.seat3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat3.Location = new System.Drawing.Point(152, 18);
-            this.seat3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat3.Name = "seat3";
-            this.seat3.Size = new System.Drawing.Size(57, 52);
-            this.seat3.TabIndex = 0;
-            this.seat3.Text = "3";
-            this.seat3.UseVisualStyleBackColor = false;
-            this.seat3.Click += new System.EventHandler(this.seat3_Click);
+            this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.logoutBtn.Location = new System.Drawing.Point(617, 25);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(98, 42);
+            this.logoutBtn.TabIndex = 9;
+            this.logoutBtn.Text = "로그아웃";
+            this.logoutBtn.UseVisualStyleBackColor = true;
             // 
-            // seat4
+            // gotomainBtn
             // 
-            this.seat4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat4.Location = new System.Drawing.Point(231, 18);
-            this.seat4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat4.Name = "seat4";
-            this.seat4.Size = new System.Drawing.Size(57, 52);
-            this.seat4.TabIndex = 0;
-            this.seat4.Text = "4";
-            this.seat4.UseVisualStyleBackColor = false;
-            this.seat4.Click += new System.EventHandler(this.seat4_Click_1);
+            this.gotomainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.gotomainBtn.Location = new System.Drawing.Point(721, 25);
+            this.gotomainBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gotomainBtn.Name = "gotomainBtn";
+            this.gotomainBtn.Size = new System.Drawing.Size(98, 42);
+            this.gotomainBtn.TabIndex = 10;
+            this.gotomainBtn.Text = "처음으로";
+            this.gotomainBtn.UseVisualStyleBackColor = true;
+            this.gotomainBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // seat5
+            // groupBox1
             // 
-            this.seat5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat5.Location = new System.Drawing.Point(307, 18);
-            this.seat5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat5.Name = "seat5";
-            this.seat5.Size = new System.Drawing.Size(57, 52);
-            this.seat5.TabIndex = 0;
-            this.seat5.Text = "5";
-            this.seat5.UseVisualStyleBackColor = false;
-            this.seat5.Click += new System.EventHandler(this.seat5_Click);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.button4);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button10);
+            this.groupBox1.Controls.Add(this.button9);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox1.Location = new System.Drawing.Point(25, 295);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(400, 123);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "좌석 상태";
             // 
-            // seat8
+            // label6
             // 
-            this.seat8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat8.Location = new System.Drawing.Point(152, 114);
-            this.seat8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat8.Name = "seat8";
-            this.seat8.Size = new System.Drawing.Size(57, 52);
-            this.seat8.TabIndex = 0;
-            this.seat8.Text = "8";
-            this.seat8.UseVisualStyleBackColor = false;
-            this.seat8.Click += new System.EventHandler(this.seat8_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(229, 83);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 17);
+            this.label6.TabIndex = 4;
+            this.label6.Text = ": 사용불가 좌석";
             // 
-            // seat6
+            // label3
             // 
-            this.seat6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat6.Location = new System.Drawing.Point(1, 114);
-            this.seat6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat6.Name = "seat6";
-            this.seat6.Size = new System.Drawing.Size(57, 52);
-            this.seat6.TabIndex = 0;
-            this.seat6.Text = "6";
-            this.seat6.UseVisualStyleBackColor = false;
-            this.seat6.Click += new System.EventHandler(this.seat6_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(229, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(95, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = ": 사용중인 좌석";
             // 
-            // seat7
+            // label5
             // 
-            this.seat7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.seat7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.seat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat7.Location = new System.Drawing.Point(74, 114);
-            this.seat7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.seat7.Name = "seat7";
-            this.seat7.Size = new System.Drawing.Size(57, 52);
-            this.seat7.TabIndex = 0;
-            this.seat7.Text = "7";
-            this.seat7.UseVisualStyleBackColor = false;
-            this.seat7.Click += new System.EventHandler(this.seat7_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(78, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.TabIndex = 3;
+            this.label5.Text = ": 내 좌석";
             // 
-            // label1
+            // label2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(192, 198);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "입구";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(78, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.TabIndex = 3;
+            this.label2.Text = ": 빈 좌석";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.button4.CausesValidation = false;
+            this.button4.Cursor = System.Windows.Forms.Cursors.No;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button4.Location = new System.Drawing.Point(187, 68);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(39, 36);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.DarkOrange;
+            this.button3.CausesValidation = false;
+            this.button3.Cursor = System.Windows.Forms.Cursors.No;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Location = new System.Drawing.Point(35, 68);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(39, 36);
+            this.button3.TabIndex = 2;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.LightGray;
+            this.button10.CausesValidation = false;
+            this.button10.Cursor = System.Windows.Forms.Cursors.No;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button10.Location = new System.Drawing.Point(187, 21);
+            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(39, 36);
+            this.button10.TabIndex = 3;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.PeachPuff;
+            this.button9.CausesValidation = false;
+            this.button9.Cursor = System.Windows.Forms.Cursors.No;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button9.Location = new System.Drawing.Point(35, 21);
+            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(39, 36);
+            this.button9.TabIndex = 2;
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // selectbox
             // 
             this.selectbox.BackColor = System.Drawing.SystemColors.Control;
+            this.selectbox.Controls.Add(this.seat13);
+            this.selectbox.Controls.Add(this.seat12);
+            this.selectbox.Controls.Add(this.seat11);
             this.selectbox.Controls.Add(this.seat10);
             this.selectbox.Controls.Add(this.seat9);
+            this.selectbox.Controls.Add(this.radioButton13);
+            this.selectbox.Controls.Add(this.radioButton12);
+            this.selectbox.Controls.Add(this.radioButton11);
             this.selectbox.Controls.Add(this.radioButton10);
             this.selectbox.Controls.Add(this.radioButton9);
             this.selectbox.Controls.Add(this.radioButton8);
@@ -211,21 +263,60 @@ namespace windowProject_final_
             this.selectbox.Controls.Add(this.seat6);
             this.selectbox.Controls.Add(this.seat3);
             this.selectbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.selectbox.Location = new System.Drawing.Point(21, 22);
+            this.selectbox.Location = new System.Drawing.Point(25, 25);
             this.selectbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.selectbox.Name = "selectbox";
             this.selectbox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.selectbox.Size = new System.Drawing.Size(376, 236);
-            this.selectbox.TabIndex = 2;
+            this.selectbox.Size = new System.Drawing.Size(400, 267);
+            this.selectbox.TabIndex = 8;
             this.selectbox.TabStop = false;
             this.selectbox.Text = "좌석 선택";
             // 
+            // seat13
+            // 
+            this.seat13.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat13.Location = new System.Drawing.Point(286, 150);
+            this.seat13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat13.Name = "seat13";
+            this.seat13.Size = new System.Drawing.Size(57, 52);
+            this.seat13.TabIndex = 6;
+            this.seat13.Text = "13";
+            this.seat13.UseVisualStyleBackColor = false;
+            // 
+            // seat12
+            // 
+            this.seat12.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat12.Location = new System.Drawing.Point(228, 150);
+            this.seat12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat12.Name = "seat12";
+            this.seat12.Size = new System.Drawing.Size(57, 52);
+            this.seat12.TabIndex = 6;
+            this.seat12.Text = "12";
+            this.seat12.UseVisualStyleBackColor = false;
+            // 
+            // seat11
+            // 
+            this.seat11.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat11.Location = new System.Drawing.Point(172, 150);
+            this.seat11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat11.Name = "seat11";
+            this.seat11.Size = new System.Drawing.Size(57, 52);
+            this.seat11.TabIndex = 6;
+            this.seat11.Text = "11";
+            this.seat11.UseVisualStyleBackColor = false;
+            // 
             // seat10
             // 
-            this.seat10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.seat10.BackColor = System.Drawing.Color.PeachPuff;
             this.seat10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.seat10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat10.Location = new System.Drawing.Point(307, 114);
+            this.seat10.Location = new System.Drawing.Point(115, 150);
             this.seat10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seat10.Name = "seat10";
             this.seat10.Size = new System.Drawing.Size(57, 52);
@@ -235,10 +326,10 @@ namespace windowProject_final_
             // 
             // seat9
             // 
-            this.seat9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.seat9.BackColor = System.Drawing.Color.PeachPuff;
             this.seat9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.seat9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.seat9.Location = new System.Drawing.Point(231, 114);
+            this.seat9.Location = new System.Drawing.Point(58, 150);
             this.seat9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.seat9.Name = "seat9";
             this.seat9.Size = new System.Drawing.Size(57, 52);
@@ -247,10 +338,43 @@ namespace windowProject_final_
             this.seat9.UseVisualStyleBackColor = false;
             this.seat9.Click += new System.EventHandler(this.seat9_Click);
             // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(307, 206);
+            this.radioButton13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(14, 13);
+            this.radioButton13.TabIndex = 4;
+            this.radioButton13.TabStop = true;
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(250, 206);
+            this.radioButton12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(14, 13);
+            this.radioButton12.TabIndex = 4;
+            this.radioButton12.TabStop = true;
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(193, 206);
+            this.radioButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(14, 13);
+            this.radioButton11.TabIndex = 4;
+            this.radioButton11.TabStop = true;
+            this.radioButton11.UseVisualStyleBackColor = true;
+            // 
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(329, 171);
+            this.radioButton10.Location = new System.Drawing.Point(136, 206);
             this.radioButton10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(14, 13);
@@ -261,7 +385,7 @@ namespace windowProject_final_
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(253, 171);
+            this.radioButton9.Location = new System.Drawing.Point(80, 206);
             this.radioButton9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(14, 13);
@@ -272,7 +396,7 @@ namespace windowProject_final_
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(174, 171);
+            this.radioButton8.Location = new System.Drawing.Point(23, 206);
             this.radioButton8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton8.Name = "radioButton8";
             this.radioButton8.Size = new System.Drawing.Size(14, 13);
@@ -283,7 +407,7 @@ namespace windowProject_final_
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(253, 74);
+            this.radioButton4.Location = new System.Drawing.Point(193, 84);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(14, 13);
@@ -294,7 +418,7 @@ namespace windowProject_final_
             // radioButton7
             // 
             this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(95, 171);
+            this.radioButton7.Location = new System.Drawing.Point(364, 84);
             this.radioButton7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton7.Name = "radioButton7";
             this.radioButton7.Size = new System.Drawing.Size(14, 13);
@@ -305,7 +429,7 @@ namespace windowProject_final_
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(174, 74);
+            this.radioButton3.Location = new System.Drawing.Point(136, 84);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(14, 13);
@@ -316,7 +440,7 @@ namespace windowProject_final_
             // radioButton6
             // 
             this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(23, 171);
+            this.radioButton6.Location = new System.Drawing.Point(307, 84);
             this.radioButton6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(14, 13);
@@ -327,7 +451,7 @@ namespace windowProject_final_
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(95, 74);
+            this.radioButton2.Location = new System.Drawing.Point(80, 84);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(14, 13);
@@ -338,7 +462,7 @@ namespace windowProject_final_
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(329, 75);
+            this.radioButton5.Location = new System.Drawing.Point(250, 84);
             this.radioButton5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(14, 13);
@@ -349,7 +473,7 @@ namespace windowProject_final_
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(23, 74);
+            this.radioButton1.Location = new System.Drawing.Point(23, 84);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(14, 13);
@@ -357,98 +481,127 @@ namespace windowProject_final_
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // seat4
             // 
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox1.Location = new System.Drawing.Point(21, 275);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(376, 118);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "좌석 상태";
+            this.seat4.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat4.Location = new System.Drawing.Point(172, 27);
+            this.seat4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat4.Name = "seat4";
+            this.seat4.Size = new System.Drawing.Size(57, 52);
+            this.seat4.TabIndex = 0;
+            this.seat4.Text = "4";
+            this.seat4.UseVisualStyleBackColor = false;
+            this.seat4.Click += new System.EventHandler(this.seat4_Click_1);
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(250, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = ": 사용중인 좌석";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(360, 241);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "입구";
             // 
-            // label2
+            // seat1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(95, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = ": 빈 좌석";
+            this.seat1.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat1.Location = new System.Drawing.Point(2, 27);
+            this.seat1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat1.Name = "seat1";
+            this.seat1.Size = new System.Drawing.Size(57, 52);
+            this.seat1.TabIndex = 0;
+            this.seat1.Text = "1";
+            this.seat1.UseVisualStyleBackColor = false;
+            this.seat1.Click += new System.EventHandler(this.seat1_Click);
             // 
-            // button10
+            // seat8
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.button10.CausesValidation = false;
-            this.button10.Cursor = System.Windows.Forms.Cursors.No;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button10.Location = new System.Drawing.Point(187, 33);
-            this.button10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(57, 52);
-            this.button10.TabIndex = 3;
-            this.button10.UseVisualStyleBackColor = false;
+            this.seat8.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat8.Location = new System.Drawing.Point(1, 150);
+            this.seat8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat8.Name = "seat8";
+            this.seat8.Size = new System.Drawing.Size(57, 52);
+            this.seat8.TabIndex = 0;
+            this.seat8.Text = "8";
+            this.seat8.UseVisualStyleBackColor = false;
+            this.seat8.Click += new System.EventHandler(this.seat8_Click);
             // 
-            // button9
+            // seat2
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.button9.CausesValidation = false;
-            this.button9.Cursor = System.Windows.Forms.Cursors.No;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button9.Location = new System.Drawing.Point(35, 33);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(57, 52);
-            this.button9.TabIndex = 2;
-            this.button9.UseVisualStyleBackColor = false;
+            this.seat2.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat2.Location = new System.Drawing.Point(59, 27);
+            this.seat2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat2.Name = "seat2";
+            this.seat2.Size = new System.Drawing.Size(57, 52);
+            this.seat2.TabIndex = 0;
+            this.seat2.Text = "2";
+            this.seat2.UseVisualStyleBackColor = false;
+            this.seat2.Click += new System.EventHandler(this.seat2_Click);
             // 
-            // button1
+            // seat5
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button1.Location = new System.Drawing.Point(312, 410);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 24);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "처음으로";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.seat5.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat5.Location = new System.Drawing.Point(229, 27);
+            this.seat5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat5.Name = "seat5";
+            this.seat5.Size = new System.Drawing.Size(57, 52);
+            this.seat5.TabIndex = 0;
+            this.seat5.Text = "5";
+            this.seat5.UseVisualStyleBackColor = false;
+            this.seat5.Click += new System.EventHandler(this.seat5_Click);
             // 
-            // label4
+            // seat7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(407, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 15);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "좌석 현황";
+            this.seat7.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat7.Location = new System.Drawing.Point(343, 28);
+            this.seat7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat7.Name = "seat7";
+            this.seat7.Size = new System.Drawing.Size(57, 52);
+            this.seat7.TabIndex = 0;
+            this.seat7.Text = "7";
+            this.seat7.UseVisualStyleBackColor = false;
+            this.seat7.Click += new System.EventHandler(this.seat7_Click);
             // 
-            // DBGrid
+            // seat6
             // 
-            this.DBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DBGrid.Location = new System.Drawing.Point(410, 40);
-            this.DBGrid.Name = "DBGrid";
-            this.DBGrid.RowTemplate.Height = 23;
-            this.DBGrid.Size = new System.Drawing.Size(360, 353);
-            this.DBGrid.TabIndex = 6;
+            this.seat6.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat6.Location = new System.Drawing.Point(286, 27);
+            this.seat6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat6.Name = "seat6";
+            this.seat6.Size = new System.Drawing.Size(57, 52);
+            this.seat6.TabIndex = 0;
+            this.seat6.Text = "6";
+            this.seat6.UseVisualStyleBackColor = false;
+            this.seat6.Click += new System.EventHandler(this.seat6_Click);
+            // 
+            // seat3
+            // 
+            this.seat3.BackColor = System.Drawing.Color.PeachPuff;
+            this.seat3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.seat3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.seat3.Location = new System.Drawing.Point(116, 27);
+            this.seat3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.seat3.Name = "seat3";
+            this.seat3.Size = new System.Drawing.Size(57, 52);
+            this.seat3.TabIndex = 0;
+            this.seat3.Text = "3";
+            this.seat3.UseVisualStyleBackColor = false;
+            this.seat3.Click += new System.EventHandler(this.seat3_Click);
             // 
             // UserInoutForm
             // 
@@ -458,7 +611,8 @@ namespace windowProject_final_
             this.ClientSize = new System.Drawing.Size(845, 443);
             this.Controls.Add(this.DBGrid);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.logoutBtn);
+            this.Controls.Add(this.gotomainBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.selectbox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -467,11 +621,11 @@ namespace windowProject_final_
             this.Name = "UserInoutForm";
             this.Text = "UserEntranceForm";
             this.Load += new System.EventHandler(this.UserInoutForm_Load);
-            this.selectbox.ResumeLayout(false);
-            this.selectbox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DBGrid)).EndInit();
+            this.selectbox.ResumeLayout(false);
+            this.selectbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,21 +633,30 @@ namespace windowProject_final_
 
         #endregion
 
-        private System.Windows.Forms.Button seat1;
-        private System.Windows.Forms.Button seat2;
-        private System.Windows.Forms.Button seat3;
-        private System.Windows.Forms.Button seat4;
-        private System.Windows.Forms.Button seat5;
-        private System.Windows.Forms.Button seat8;
-        private System.Windows.Forms.Button seat6;
-        private System.Windows.Forms.Button seat7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox selectbox;
+        private System.Windows.Forms.DataGridView DBGrid;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button logoutBtn;
+        private System.Windows.Forms.Button gotomainBtn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.GroupBox selectbox;
+        private System.Windows.Forms.Button seat13;
+        private System.Windows.Forms.Button seat12;
+        private System.Windows.Forms.Button seat11;
+        private System.Windows.Forms.Button seat10;
+        private System.Windows.Forms.Button seat9;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton7;
@@ -502,12 +665,14 @@ namespace windowProject_final_
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.Button seat9;
-        private System.Windows.Forms.Button seat10;
-        private System.Windows.Forms.DataGridView DBGrid;
+        private System.Windows.Forms.Button seat4;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button seat1;
+        private System.Windows.Forms.Button seat8;
+        private System.Windows.Forms.Button seat2;
+        private System.Windows.Forms.Button seat5;
+        private System.Windows.Forms.Button seat7;
+        private System.Windows.Forms.Button seat6;
+        private System.Windows.Forms.Button seat3;
     }
 }

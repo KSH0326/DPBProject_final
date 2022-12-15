@@ -55,7 +55,8 @@ namespace windowProject_final_
             String inName = NameBox.Text.Trim(); //**
             String inPhone = IdBox.Text.Trim(); //**
             String inpasswd = PwBox.Text.Trim(); //**
-            string strqry = "INSERT INTO phone VALUES ("+ inPhone + ", " + inpasswd + ", " + inName + ")";
+            string strqry = "INSERT INTO users VALUES ("+ inPhone + ", " + inpasswd + ", '" + inName + "', 0, 4)"; // 적립금 0, 랭크 4
+            MessageBox.Show(strqry);
             //"INSERT INTO phone VALUES (id, pname, phone, email)"을 수정
             OracleCommand OraCmd = new OracleCommand(strqry, odpConn);
 
@@ -65,48 +66,67 @@ namespace windowProject_final_
         {
             InitializeComponent();
         }
-        FirebaseConfig fbc = new FirebaseConfig()
-        {
-            AuthSecret = "74wa4lLLYMdKI7R22dI3xOYNnY5UFpznf9zb0htV",
-            BasePath = "https://windowprogramming-final-work-default-rtdb.firebaseio.com/"
-        };
-        IFirebaseClient client;
+        
         private void LOGIN_button_Click(object sender, EventArgs e)
         {
-
-            if (PwBox.Text == PwChBox.Text)
+            String username = NameBox.Text;
+            String userID = IdBox.Text;
+            String userPW = PwBox.Text;
+            String userPWCK = PwChBox.Text;
+            if (String.IsNullOrEmpty(NameBox.Text))
             {
-                if (INSERTRow() > 0)
-                {
-                    MessageBox.Show("회원가입 완료!");
-                }
-                else MessageBox.Show("오류로 인한 회원가입 실패!");
-                this.Close();
+                MessageBox.Show("이름을 입력해주세요");
+                NameBox.Focus();
+            }
+            else if (String.IsNullOrEmpty(IdBox.Text))
+            {
+                MessageBox.Show("휴대폰번호를 입력해주세요");
+                IdBox.Focus();
+            }
+            else if (String.IsNullOrEmpty(PwBox.Text))
+            {
+                MessageBox.Show("비밀번호를 입력해주세요");
+                PwBox.Focus();
+            }
+            else if (String.IsNullOrEmpty(PwChBox.Text))
+            {
+                MessageBox.Show("비밀번호를 다시 입력해주세요");
+                PwChBox.Focus();
+            }
+
+            else if (PwBox.Text != PwChBox.Text)
+            {
+                MessageBox.Show("비밀번호가 일치하지 않습니다. 비밀번호를 다시 입력해주세요.");
             }
             else
             {
-                MessageBox.Show("비밀번호와 비밀번호 확인이 일치하지 않습니다!");
+            
+                if (INSERTRow() > 0)
+                {
+                    odpConn.Close();
+                    this.Dispose();
+                    MessageBox.Show("회원가입이 완료되었습니다. 로그인 후 이용해주세요.");
+                    MainForm mainform = new MainForm();
+                    mainform.Show();
+                }
+                else MessageBox.Show("오류로 인한 회원가입 실패!");
+                odpConn.Close();
+                this.Dispose();
             }
 
         }
 
         private void UserLoginForm_Load(object sender, EventArgs e)
         {
-            try
-            {
-                client = new FireSharp.FirebaseClient(fbc);
-            }
-            catch
-            {
-                MessageBox.Show("Error!");
-            }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             MainForm mainform = new MainForm();
             mainform.Show();
+            this.Dispose();
         }
 
         private void timer1_Tick(object sender, EventArgs e)

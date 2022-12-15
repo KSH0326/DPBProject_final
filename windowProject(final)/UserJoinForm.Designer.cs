@@ -47,30 +47,30 @@ namespace windowProject_final_
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(32, 133);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(28, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 18);
+            this.label1.Size = new System.Drawing.Size(32, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "이름";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(32, 183);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(28, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 18);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "휴대폰번호";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label3.Location = new System.Drawing.Point(32, 233);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(28, 186);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 18);
+            this.label3.Size = new System.Drawing.Size(56, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "비밀번호";
             // 
@@ -79,37 +79,41 @@ namespace windowProject_final_
             this.NameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NameBox.Font = new System.Drawing.Font("나눔스퀘어", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.NameBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.NameBox.Location = new System.Drawing.Point(150, 130);
+            this.NameBox.Location = new System.Drawing.Point(131, 104);
+            this.NameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NameBox.Name = "NameBox";
-            this.NameBox.Size = new System.Drawing.Size(190, 27);
+            this.NameBox.Size = new System.Drawing.Size(166, 23);
             this.NameBox.TabIndex = 3;
             // 
             // IdBox
             // 
             this.IdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IdBox.Font = new System.Drawing.Font("나눔스퀘어", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.IdBox.Location = new System.Drawing.Point(150, 180);
+            this.IdBox.Location = new System.Drawing.Point(131, 144);
+            this.IdBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.IdBox.Name = "IdBox";
-            this.IdBox.Size = new System.Drawing.Size(190, 27);
+            this.IdBox.Size = new System.Drawing.Size(166, 23);
             this.IdBox.TabIndex = 4;
             // 
             // PwChBox
             // 
             this.PwChBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PwChBox.Font = new System.Drawing.Font("나눔스퀘어", 10.2F);
-            this.PwChBox.Location = new System.Drawing.Point(150, 277);
+            this.PwChBox.Location = new System.Drawing.Point(131, 222);
+            this.PwChBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PwChBox.Name = "PwChBox";
             this.PwChBox.PasswordChar = '●';
-            this.PwChBox.Size = new System.Drawing.Size(190, 27);
+            this.PwChBox.Size = new System.Drawing.Size(166, 23);
             this.PwChBox.TabIndex = 5;
             // 
             // LoginBtn
             // 
             this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.LoginBtn.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LoginBtn.Location = new System.Drawing.Point(74, 351);
+            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.LoginBtn.Location = new System.Drawing.Point(65, 281);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(100, 35);
+            this.LoginBtn.Size = new System.Drawing.Size(88, 28);
             this.LoginBtn.TabIndex = 6;
             this.LoginBtn.Text = "회원가입";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -118,10 +122,11 @@ namespace windowProject_final_
             // GotoMainBtn
             // 
             this.GotoMainBtn.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.GotoMainBtn.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GotoMainBtn.Location = new System.Drawing.Point(194, 351);
+            this.GotoMainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.GotoMainBtn.Location = new System.Drawing.Point(170, 281);
+            this.GotoMainBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.GotoMainBtn.Name = "GotoMainBtn";
-            this.GotoMainBtn.Size = new System.Drawing.Size(100, 35);
+            this.GotoMainBtn.Size = new System.Drawing.Size(88, 28);
             this.GotoMainBtn.TabIndex = 7;
             this.GotoMainBtn.Text = "처음으로";
             this.GotoMainBtn.UseVisualStyleBackColor = false;
@@ -130,10 +135,10 @@ namespace windowProject_final_
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("나눔스퀘어_ac Bold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label4.Location = new System.Drawing.Point(32, 279);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(28, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 18);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 2;
             this.label4.Text = "비밀번호 확인";
             // 
@@ -141,19 +146,20 @@ namespace windowProject_final_
             // 
             this.PwBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PwBox.Font = new System.Drawing.Font("나눔스퀘어", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.PwBox.Location = new System.Drawing.Point(150, 231);
+            this.PwBox.Location = new System.Drawing.Point(131, 185);
+            this.PwBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PwBox.Name = "PwBox";
             this.PwBox.PasswordChar = '●';
-            this.PwBox.Size = new System.Drawing.Size(190, 27);
+            this.PwBox.Size = new System.Drawing.Size(166, 23);
             this.PwBox.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("타이포_쌍문동 B", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(111, 57);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(97, 46);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 40);
+            this.label5.Size = new System.Drawing.Size(98, 31);
             this.label5.TabIndex = 8;
             this.label5.Text = "회원가입";
             // 
@@ -163,10 +169,10 @@ namespace windowProject_final_
             // 
             // UserJoinForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(383, 451);
+            this.ClientSize = new System.Drawing.Size(335, 361);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.GotoMainBtn);
             this.Controls.Add(this.LoginBtn);
@@ -178,6 +184,7 @@ namespace windowProject_final_
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserJoinForm";
             this.Text = "회원가입";
             this.Load += new System.EventHandler(this.UserLoginForm_Load);
