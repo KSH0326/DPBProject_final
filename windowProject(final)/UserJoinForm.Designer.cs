@@ -36,12 +36,12 @@ namespace windowProject_final_
             this.NameBox = new System.Windows.Forms.TextBox();
             this.IdBox = new System.Windows.Forms.TextBox();
             this.PwChBox = new System.Windows.Forms.TextBox();
-            this.LoginBtn = new System.Windows.Forms.Button();
-            this.GotoMainBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.PwBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnjoin = new System.Windows.Forms.Button();
+            this.btnmain = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -106,32 +106,6 @@ namespace windowProject_final_
             this.PwChBox.Size = new System.Drawing.Size(166, 23);
             this.PwChBox.TabIndex = 5;
             // 
-            // LoginBtn
-            // 
-            this.LoginBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.LoginBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.LoginBtn.Location = new System.Drawing.Point(65, 281);
-            this.LoginBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(88, 28);
-            this.LoginBtn.TabIndex = 6;
-            this.LoginBtn.Text = "회원가입";
-            this.LoginBtn.UseVisualStyleBackColor = false;
-            this.LoginBtn.Click += new System.EventHandler(this.LOGIN_button_Click);
-            // 
-            // GotoMainBtn
-            // 
-            this.GotoMainBtn.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.GotoMainBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.GotoMainBtn.Location = new System.Drawing.Point(170, 281);
-            this.GotoMainBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.GotoMainBtn.Name = "GotoMainBtn";
-            this.GotoMainBtn.Size = new System.Drawing.Size(88, 28);
-            this.GotoMainBtn.TabIndex = 7;
-            this.GotoMainBtn.Text = "처음으로";
-            this.GotoMainBtn.UseVisualStyleBackColor = false;
-            this.GotoMainBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -157,7 +131,7 @@ namespace windowProject_final_
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(97, 46);
+            this.label5.Location = new System.Drawing.Point(116, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 31);
             this.label5.TabIndex = 8;
@@ -167,15 +141,40 @@ namespace windowProject_final_
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnjoin
+            // 
+            this.btnjoin.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnjoin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnjoin.Location = new System.Drawing.Point(62, 294);
+            this.btnjoin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnjoin.Name = "btnjoin";
+            this.btnjoin.Size = new System.Drawing.Size(98, 42);
+            this.btnjoin.TabIndex = 11;
+            this.btnjoin.Text = "회원가입";
+            this.btnjoin.UseVisualStyleBackColor = false;
+            this.btnjoin.Click += new System.EventHandler(this.LOGIN_button_Click);
+            // 
+            // btnmain
+            // 
+            this.btnmain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmain.Location = new System.Drawing.Point(185, 294);
+            this.btnmain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnmain.Name = "btnmain";
+            this.btnmain.Size = new System.Drawing.Size(98, 42);
+            this.btnmain.TabIndex = 12;
+            this.btnmain.Text = "처음으로";
+            this.btnmain.UseVisualStyleBackColor = true;
+            this.btnmain.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserJoinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(335, 361);
+            this.Controls.Add(this.btnjoin);
+            this.Controls.Add(this.btnmain);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.GotoMainBtn);
-            this.Controls.Add(this.LoginBtn);
             this.Controls.Add(this.PwBox);
             this.Controls.Add(this.PwChBox);
             this.Controls.Add(this.IdBox);
@@ -201,11 +200,11 @@ namespace windowProject_final_
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.TextBox IdBox;
         private System.Windows.Forms.TextBox PwChBox;
-        private System.Windows.Forms.Button LoginBtn;
-        private System.Windows.Forms.Button GotoMainBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox PwBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnjoin;
+        private System.Windows.Forms.Button btnmain;
     }
 }

@@ -9,64 +9,95 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FireSharp.Config;
 using FireSharp.Interfaces;
+using Oracle.DataAccess.Client;
 
 namespace windowProject_final_
 {
     public partial class UserLoginForm : Form
     {
+        private int intID; //ID 필드 설정
+        private string strCommand;
+        //데이터 삭제, 추가, 업데이트 인지를 설정할 문자열 필드
+        private OracleConnection odpConn = new OracleConnection();
+        public int getintID
+        { get { return intID; } }
+        public string getstrCommand
+        { get { return strCommand; } }
+
         public UserLoginForm()
         {
             InitializeComponent();
         }
-        FirebaseConfig fbc = new FirebaseConfig()
-        {
-            AuthSecret = "74wa4lLLYMdKI7R22dI3xOYNnY5UFpznf9zb0htV",
-            BasePath = "https://windowprogramming-final-work-default-rtdb.firebaseio.com/"
-        };
-        IFirebaseClient client;
-
-        private void LOGIN_button_Click(object sender, EventArgs e)
-        {
-            var result = client.Get("가입자 명단/" + IdBox.Text);
-            Upload upd = result.ResultAs<Upload>();
-
-            if (upd == null)
-            {
-                MessageBox.Show("아이디를 잘못 입력하였습니다. 입력하신 내용을 확인해주세요.");
-            }
-            
-            else if (PwBox.Text == upd.pw)
-            {
-                MessageBox.Show("로그인 되었습니다.");
-                this.Hide();
-                MainForm mainform = new MainForm();
-                mainform.Show();
-
-            }
-            else
-            {
-                MessageBox.Show("비밀번호를 잘못 입력하였습니다. 입력하신 내용을 확인해주세요.");
-            }
-            
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            MainForm mainform = new MainForm();
-            mainform.Show();
-        }
+        
 
         private void UserLoginForm_Load(object sender, EventArgs e)
         {
-            try
+           
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+
+            if (PhoneNumBox.Text == null)
             {
-                client = new FireSharp.FirebaseClient(fbc);
+                MessageBox.Show("전화번호를 입력해주세요.");
             }
-            catch
+
+            else if (PwBox.Text == null)
             {
-                MessageBox.Show("Error!");
+                MessageBox.Show("비밀번호를 입력해주세요.");
             }
+
+            else
+            {
+                odpConn.ConnectionString = "User Id=kim1; Password=1111; Data Source=(DESCRIPTION =   (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521))   (CONNECT_DATA =     (SERVER = DEDICATED)     (SERVICE_NAME = xe)   ) );";
+
+                odpConn.Open();
+                string strqry = "select * from users where phonenum =:phonenum";
+                OracleCommand comm = new OracleCommand(strqry, odpConn);
+                comm.Parameters.Add("phonenum", OracleDbType.Varchar2, 11);
+                comm.Parameters["phonenum"].Value = PhoneNumBox.Text.Trim();
+                OracleDataReader sr = comm.ExecuteReader();
+
+                if (sr.Read())
+                {
+                    if (sr["password"].ToString() == PwBox.Text)
+                    {
+                        MainForm mainform = new MainForm();
+                        mainform.Show();
+                        sr.Close();
+                        odpConn.Close();
+                        this.Dispose();
+                    }
+                    else
+                    {
+                        MessageBox.Show("아이디 또는 비밀번호가 올바르지 않습니다.");
+                        MessageBox.Show(sr["password"].ToString() + " " + PwBox.Text);
+                        sr.Close();
+                        odpConn.Close();
+                    }
+                        
+
+                    
+                }
+                else
+                {
+                    MessageBox.Show("아이디 또는 비밀번호가 올바르지 않습니다.");
+                    sr.Close();
+                    odpConn.Close();
+                }
+                    
+
+            }
+            
+    }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            StartForm startForm = new StartForm();
+            startForm.Show();
+            this.Dispose();
         }
     }
 }

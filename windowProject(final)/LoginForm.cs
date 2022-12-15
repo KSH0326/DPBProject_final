@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.DataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace windowProject_final_
 {
     public partial class LoginForm : Form
     {
+
 
         public LoginForm()
         {
@@ -28,11 +30,9 @@ namespace windowProject_final_
             if (IDtext.Text == "k" && PWtext.Text == "k")
             {
 
-
-                MainForm mainForm1 = new MainForm();
+                StartForm startForm1 = new StartForm();
                 MessageBox.Show("관리자 계정으로 로그인 되었습니다. 감사합니다!");
-
-                mainForm1.Show();
+                startForm1.Show();
                 this.Hide();
 
             }
@@ -47,8 +47,7 @@ namespace windowProject_final_
                 MessageBox.Show("비밀번호를 입력해주세요.");
             }
 
-            else
-                MessageBox.Show("아이디 또는 비밀번호가 올바르지 않습니다.");
+            else MessageBox.Show("아이디 또는 비밀번호가 올바르지 않습니다.");
         }
     }
 }

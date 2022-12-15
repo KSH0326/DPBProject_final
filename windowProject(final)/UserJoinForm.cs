@@ -124,8 +124,8 @@ namespace windowProject_final_
         private void button1_Click(object sender, EventArgs e)
         {
             
-            MainForm mainform = new MainForm();
-            mainform.Show();
+            StartForm startForm = new StartForm();
+            startForm.Show();
             this.Dispose();
         }
 
