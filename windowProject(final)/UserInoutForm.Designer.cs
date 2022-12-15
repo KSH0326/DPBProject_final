@@ -447,7 +447,7 @@ namespace windowProject_final_
             this.DBGrid.Location = new System.Drawing.Point(410, 40);
             this.DBGrid.Name = "DBGrid";
             this.DBGrid.RowTemplate.Height = 23;
-            this.DBGrid.Size = new System.Drawing.Size(405, 353);
+            this.DBGrid.Size = new System.Drawing.Size(360, 353);
             this.DBGrid.TabIndex = 6;
             // 
             // UserInoutForm
