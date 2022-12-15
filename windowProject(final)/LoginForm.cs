@@ -24,15 +24,15 @@ namespace windowProject_final_
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            if (IDtext.Text == "kojihye" && PWtext.Text == "000429")
+            if (IDtext.Text == "k" && PWtext.Text == "k")
             {
 
-                this.Hide();
 
                 MainForm mainForm1 = new MainForm();
                 MessageBox.Show("관리자 계정으로 로그인 되었습니다. 감사합니다!");
 
                 mainForm1.Show();
+                this.Hide();
 
             }
 
