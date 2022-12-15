@@ -58,9 +58,6 @@ namespace windowProject_final_
             this.button9 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.좌석번호 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.남은시간 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
             this.DBGrid = new System.Windows.Forms.DataGridView();
             this.selectbox.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -444,40 +441,13 @@ namespace windowProject_final_
             this.label4.TabIndex = 5;
             this.label4.Text = "좌석 현황";
             // 
-            // 좌석번호
-            // 
-            this.좌석번호.Text = "좌석번호";
-            this.좌석번호.Width = 73;
-            // 
-            // 남은시간
-            // 
-            this.남은시간.Text = "남은 시간";
-            this.남은시간.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.남은시간.Width = 246;
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.좌석번호,
-            this.남은시간});
-            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(410, 38);
-            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(98, 355);
-            this.listView1.TabIndex = 3;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
             // DBGrid
             // 
             this.DBGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DBGrid.Location = new System.Drawing.Point(514, 40);
+            this.DBGrid.Location = new System.Drawing.Point(410, 40);
             this.DBGrid.Name = "DBGrid";
             this.DBGrid.RowTemplate.Height = 23;
-            this.DBGrid.Size = new System.Drawing.Size(301, 353);
+            this.DBGrid.Size = new System.Drawing.Size(405, 353);
             this.DBGrid.TabIndex = 6;
             // 
             // UserInoutForm
@@ -489,7 +459,6 @@ namespace windowProject_final_
             this.Controls.Add(this.DBGrid);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.selectbox);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -535,9 +504,6 @@ namespace windowProject_final_
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ColumnHeader 좌석번호;
-        private System.Windows.Forms.ColumnHeader 남은시간;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.Button seat9;

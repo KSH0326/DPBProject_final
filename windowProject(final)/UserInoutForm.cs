@@ -61,7 +61,7 @@ namespace windowProject_final_
             string strqry = "INSERT INTO seat VALUES (sysdate, to_char(sysdate + 2/24, 'yy/mm/dd hh24:mi:ss'), " + inid + ")";
             //"INSERT INTO phone VALUES (id, pname, phone, email)"을 수정
             OracleCommand OraCmd = new OracleCommand(strqry, odpConn);
-
+            odpConn.Close();
             return OraCmd.ExecuteNonQuery(); //추가되는 행수 반환
         }
 
@@ -72,8 +72,8 @@ namespace windowProject_final_
             odpConn.Open();
             int getID = i; //** 좌석 번호
             string strqry = "DELETE FROM seat WHERE seatnum = " + getID; //구문
-
             OracleCommand OraCmd = new OracleCommand(strqry, odpConn);
+            odpConn.Close();
             return OraCmd.ExecuteNonQuery();
         }
 
